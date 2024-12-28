@@ -25,3 +25,9 @@ if (names[1] == 'Karl'){
 } else {
     console.log('William is in class')
 }
+
+if (name[2] === 'Rashida') {
+console.log("Welcome to class Rashida")
+} else {
+    console.log("Welcome to class Janelis")
+};

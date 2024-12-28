@@ -29,3 +29,15 @@ console.log(`My teacher's name is ${teacherName}`);
 var teacherAge = 48;
 
 console.log(`Again, my name is ${name}`);
+
+name = "William";
+console.log(name);
+
+console.log("My name is William");
+name = "Sanchez";
+
+console.log("My name is " + name);
+console.log("My name is", name);
+
+name = "Janelis";
+console.log(`My name is ${name}`);

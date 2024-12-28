@@ -1,15 +1,18 @@
 // Primitive data types include undefined, string, number, boolean and null
 // Undefined variables haven't been assigned values yet.
 let myUndefined;
+console.log(typeof myUndefined);
 
 // A string is a series of characters and is surrounded by quotes
 const myStringWelcome = 'Hello World';
 const myStringPassword = '865Password!2020';
 
+console.log(typeof myStringPassword);
+
 // A number can be either an integer or a decimal
 const myNumberInt = 100;
 const myNumberDecimal = 100.100;
-
+console.log(typeof myNumberDecimal);
 // Booleans have two values: true or false
 const isMyBooleanTrue = true;
 const isMyBooleanFalse = false;

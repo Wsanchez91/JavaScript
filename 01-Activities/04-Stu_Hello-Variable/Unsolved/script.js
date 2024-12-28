@@ -1,28 +1,21 @@
-// Write Your JavaScript Code Here
 let personName = "William";
- console.log(personName
- );
 
- console.log(`My name is ${personName}`);
+console.log(personName);
 
- let pets = 2;
+let pets = 4;
 
- console.log(`I have ${pets} pet(s)`);
+console.log(pets);
 
- let funFact = 'I do forex trading';
+let funFact = "I'm a forex trader, and I used to be a Youtuber";
 
- console.log(`Fun Fact: ${funFact}`);
+console.log(funFact);
 
- personName = "Jay";
- pets = 2000;
- funFact = 'This is the second week of the coding class';
+personName = "Janelis";
+pets = 20;
+funFact = "I'm enjoying coding, and I see a future in it";
 
- console.log(personName);
- console.log(pets);
- console.log(funFact);
+console.log(personName);
+console.log(pets);
+console.log(funFact);
 
- console.log(personName + funFact);
-
- console.log(`My name is ${personName}`);
- console.log(`I have ${pets} pet(s)`);
- console.log(`Fun Fact: ${funFact}`);
+console.log(personName + pets + funFact);// this just addes the values together on the same line with no spaces in between each value.
