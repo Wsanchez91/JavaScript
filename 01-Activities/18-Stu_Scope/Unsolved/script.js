@@ -1,6 +1,6 @@
 // TODO: Declare variable 'shout' with the value 'Shout' so it's available to `justShout` and `shoutItAllOut` functions
 const shout = "Shout";
-const animal = "Tigers";
+
 
 function justShout() {
   console.log(`${shout}, ${shout}`);
@@ -23,6 +23,7 @@ function sayLions() {
 }
 
 function sayTigers() {
+  const animal = "Tigers";
   console.log(`and ${animal} and `);
   return;
 }
@@ -45,10 +46,11 @@ sayBears();
 
 function singAlong() {
   const sing = 'Sing';
-  console.log(`${sing},`);
+  console.log(`${sing}`);
   const singASong = function () {
     console.log(`${sing} a Song.`);
   };
+  singASong();
   singASong();
 }
 

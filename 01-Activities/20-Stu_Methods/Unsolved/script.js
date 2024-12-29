@@ -16,4 +16,4 @@ console.log(galaxy);
 
 const upperCaseStar = star.toUpperCase();
 
-console.log(star);
+console.log(upperCaseStar);
