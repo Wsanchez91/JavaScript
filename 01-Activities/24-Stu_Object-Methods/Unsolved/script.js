@@ -1,4 +1,4 @@
-const chosenPet = 'Lulu';
+const chosenPet = 'Beast';
 
 const shelter = {
   dogs: ['Mackie', 'Bernice', 'Cookie Monster', 'Spot'],
@@ -10,7 +10,7 @@ const shelter = {
 
 // TODO: Debug the code below
 const dogMessage = function () {
-   console.log(`Congrats! ${chosenPet.Lulu}, a great dog, is available for adoption!`);
+   console.log(`Congrats! ${chosenPet}, a great dog, is available for adoption!`);
    shelter.apptMessage();
 };
 
