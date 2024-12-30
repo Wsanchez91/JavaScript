@@ -26,8 +26,8 @@ const investor = {
 };
 
 // TODO: After commenting, check your results!
-helloThis();
+helloThis();//it will say HelloThis
 
 // TODO: After commenting, check your results!
-child.ageTenYears();
-investor.investment.investmentGrowth();
+child.ageTenYears();//this should show 20
+investor.investment.investmentGrowth();//this should show 5000*1.15.
