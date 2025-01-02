@@ -17,6 +17,9 @@ function renderLastRegistered() {
   
   userEmailSpan.textContent = localStorage.getItem('email');
   userPasswordSpan.textContent = localStorage.getItem('password');
+
+  renderLastRegistered(userEmailSpan);
+  renderLastRegistered(userPasswordSpan);
 }
 
 signUpButton.addEventListener('click', function (event) {
