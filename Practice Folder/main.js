@@ -191,9 +191,9 @@ const todoIsComplete = todos.map(function (todo) {
 console.log(todoIsComplete);
 
 const todosIsCompleteTrue = todos.filter(function (todo) {
-  return todo.isCompleted === true;
+  return todo.isCompleted === true;//with the filter function I created a new variable called todosIsCompleteTrue, which created a new array the only shows the true statements. 
 }) .map(function(todo) {
-  return todo.text;
+  return todo.text;//this is just a continuation of the .filter logic above, but this map made the newly created variable not only filter the true statements, but showed the text of those true statements. 
 });
 
 console.log(todosIsCompleteTrue);
