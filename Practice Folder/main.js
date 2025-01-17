@@ -86,61 +86,116 @@ const person = {
   },
 };
 
-console.log(person);//this gives you the whole object.
-console.log(person.firsName);//this gives you only the first name.
-console.log(person.hobbies);//this gives you only the array in the hobbies section.
-console.log(person.firsName, person.lastName);//you are able to add more than one parameter. 
-console.log(person.hobbies[1]);//you are able to select a specific index value inside an array.
-console.log(person.address.city);//you are able to select information from another object inside the parent object. 
+console.log(person); //this gives you the whole object.
+console.log(person.firsName); //this gives you only the first name.
+console.log(person.hobbies); //this gives you only the array in the hobbies section.
+console.log(person.firsName, person.lastName); //you are able to add more than one parameter.
+console.log(person.hobbies[1]); //you are able to select a specific index value inside an array.
+console.log(person.address.city); //you are able to select information from another object inside the parent object.
 
-const {firsName, lastName, address: {city}} = person;//this allows you to pull out the information for the object, and you could call the pulled information. If you want to pull a value from the an object inside the parent object, it needs to be written as const address: {city} = person.
-console.log(firsName);//this will give you "William" from the person object.
+const {
+  firsName,
+  lastName,
+  address: { city },
+} = person; //this allows you to pull out the information for the object, and you could call the pulled information. If you want to pull a value from the an object inside the parent object, it needs to be written as const address: {city} = person.
+console.log(firsName); //this will give you "William" from the person object.
 console.log(city);
 
-person.email = 'williamsanchez.8055@gmail.com';//this adds a new item to the parent object.
-console.log(person);// now you can see that the newly added email is now apart of the object.
+person.email = "williamsanchez.8055@gmail.com"; //this adds a new item to the parent object.
+console.log(person); // now you can see that the newly added email is now apart of the object.
 
 const todos = [
-    {
-        id: 1,
-        text: "take out trash",
-        isCompleted: true
-
-    },
-    {
-        id: 2,
-        text: "meeting with boss",
-        isCompleted: true
-
-    },
-    {
-        id: 3,
-        text: "dentist appt",
-        isCompleted: false
-
-    }
+  {
+    id: 1,
+    text: "take out trash",
+    isCompleted: true,
+  },
+  {
+    id: 2,
+    text: "meeting with boss",
+    isCompleted: true,
+  },
+  {
+    id: 3,
+    text: "dentist appt",
+    isCompleted: false,
+  },
 ];
 
-console.log(todos[1].text);//this allows you to call a object value from the array. This one pulls the text value from the id 2.
+console.log(todos[1].text); //this allows you to call a object value from the array. This one pulls the text value from the id 2.
 console.log(todos[2].isCompleted);
 todos.push({
-    id: 4,
-    text: "gaming session",
-    isCompleted: false
+  id: 4,
+  text: "gaming session",
+  isCompleted: false,
 });
 
-console.log(todos);//here it is showing the new object I added to the end of the array.
+console.log(todos); //here it is showing the new object I added to the end of the array.
 
 todos.unshift({
-        id: 10,
-        text: "1 to the 2 to the 3",
-        isCompleted: false
+  id: 10,
+  text: "1 to the 2 to the 3",
+  isCompleted: false,
 });
 
-console.log(todos);//here it id showing the new object I added to the end.
+console.log(todos); //here it id showing the new object I added to the end.
 console.log(todos[4].id);
 
-const todosJSON = JSON.stringify(todos);//this converting the object into a string that it read by a server.
+const todosJSON = JSON.stringify(todos); //this converting the object into a string that it read by a server.
 console.log(todosJSON);
 
-//I ended the video at 37:37.
+//for loops
+
+for (let i = 0; i < 10; i++) {
+  console.log(`For Loop Number: ${i}`);
+} //this is a for loop, what this is doing is that it will follow the logic that was entered into the parenthesis, and if it meets the criteria it will keep running the logic until it stops. in this case, we are creating a i variable with a value of 0. The logic to make it end is once the i value is greater than 10 it will stop. The i++ is really i + 1, so every time the logic is ran, it will increase the value of i by one.
+
+let i = 0;
+while (i < 10) {
+  console.log(`While Loop Number: ${i}`);
+  i++;
+} // I while loop is the same as the for loop, with the only difference being that the variable is outside the logic.
+
+for (let i = 0; i < todos.length; i++) {
+  console.log(todos[i].text);
+} //this is the same thing as the normal for loop, but instead of giving a flat number to end the logic, we use a array's length as the end point.
+
+for (let todo of todos) {
+  console.log(todo.text);
+} //this is a better way display the information in an array.
+
+for (let todo of todos) {
+  console.log(todo.id);
+} //this is the same thing as above, I just used the ids instead of the text.
+
+//this are different kinds of ways to get information from arrays. forEach which just goes down the line of the array. map which creates a new array from an existing array. filter which will allow you to create a new array from an array, but it will filter things out that you want.
+
+todos.forEach(function (todo) {
+  console.log(todo.text);
+}); //this is very similar to a normal for loop, but this allows you to skip creating the i = 0 logic, and still goes through all the values in an array, while creating a new variable called todo.
+
+const todoText = todos.map(function (todo) {
+  return todo.text;
+});
+console.log(todoText);//this map function that created a new array called todoText that only has the text from the old array. 
+
+const todoId = todos.map(function (todo) {
+  return todo.id;
+});
+console.log(todoId);//here I created a new variable called todoId, which only shows the ids of the old array.
+
+const todoIsComplete = todos.map(function (todo) {
+  return todo.isCompleted;
+});
+
+console.log(todoIsComplete);
+
+const todosIsCompleteTrue = todos.filter(function (todo) {
+  return todo.isCompleted === true;
+}) .map(function(todo) {
+  return todo.text;
+});
+
+console.log(todosIsCompleteTrue);
+
+//I stopped the video at 46:02
