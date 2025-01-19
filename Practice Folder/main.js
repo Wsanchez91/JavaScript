@@ -348,3 +348,5 @@ console.log(person1.getBirthYear());
 console.log(person2.getFullName()); 
 
 console.log(person1);
+
+//ended the video on 1:09:31
