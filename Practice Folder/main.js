@@ -1,5 +1,5 @@
-// // // // console.log("Hello World!"); //console.log allows you to display your javascript code on a browser or node.js.
-// // // // console.log(
+// console.log("Hello World!"); //console.log allows you to display your javascript code on a browser or node.js.
+// console.log(
 // // // //   "My name is William, and I will master javascript, hopefully by the end of the month!!!"
 // // // // ); //this is just another example of console.log.
 // // // // // you can also write all your console.logs directly on the developer tools on the browser.
@@ -326,27 +326,26 @@
 
 //Class is the same as OOP func as above, but it's cleaner. For example: above to create the OOP func you needed to start by function Person (){}, but in OOP class you start with class Person{constructor()}. Also, to use the prototype syntax, you need to write it outside the Person func as Person.prototype.getBirthYear (){}, but in the OOP class, you can write it directly inside the Person func, and by writing getBirthYear(){}. Class looks much cleaner
 
-class Person {
-  constructor(firstName, lastName, dob) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.dob = new Date(dob);
-  }
-  getBirthYear(){
-    return this.dob.getFullYear();
-  }
+// class Person {
+//   constructor(firstName, lastName, dob) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.dob = new Date(dob);
+//   }
+//   getBirthYear(){
+//     return this.dob.getFullYear();
+//   }
 
-  getFullName(){
-    return `${this.firstName} ${this.lastName}`;
-  }
-};
+//   getFullName(){
+//     return `${this.firstName} ${this.lastName}`;
+//   }
+// };
 
-const person1 = new Person('John', 'Doe', '4-3-1980');
-const person2 = new Person('William', 'Sanchez', '10-7-1991');
+// const person1 = new Person('John', 'Doe', '4-3-1980');
+// const person2 = new Person('William', 'Sanchez', '10-7-1991');
 
-console.log(person1.getBirthYear()); 
-console.log(person2.getFullName()); 
+// console.log(person1.getBirthYear()); 
+// console.log(person2.getFullName()); 
 
-console.log(person1);
+// console.log(person1);
 
-//ended the video on 1:09:31
