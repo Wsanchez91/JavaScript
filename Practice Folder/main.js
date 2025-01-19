@@ -341,6 +341,9 @@ class Person {
   }
 };
 
+const person1 = new Person('John', 'Doe', '4-3-1980');
+const person2 = new Person('William', 'Sanchez', '10-7-1991');
+
 console.log(person1.getBirthYear()); 
 console.log(person2.getFullName()); 
 
