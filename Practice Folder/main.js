@@ -349,3 +349,68 @@
 
 // console.log(person1);
 
+//DOM = Document Object Model which is the web browser. The below is to manipulate the browser/html file. 
+
+// //single element selector
+// console.log(document.getElementById('my-form'));//this is how you manipulate the browser by using the document syntax, which means document/items in the site. Then you need to use things like getElementById to effect/link to the html. For example, getElementById which selects the any id you created in the html file. There are other element selectors that can be used to link other things, but you can only select one thing person use or the first time the element shows up.   
+
+// console.log(document.querySelector('h1'));//this is similar to getElementById, but much better since you can select anything like: id, class, or tags. querySelector is a much better way to select/link an element. querySelector only allows you to select one thing at a time or the first time the element shows up.  
+
+// //multiple element selector
+// console.log(document.querySelectorAll('.item'));this is very similar to querySelector, were you can select any element on the html file, but the difference is that with querySelectorAll allows you to select all the times that element is used. For example, if you have 3 div tags on your html file, use document.querySelector("dev"); it will only link to the first one. If you do document.querySelectorAll("dev"); it will select all the dev in the html file you created. 
+// console.log(document.getElementsByClassName('item'));
+
+// const items = document.querySelectorAll('.item');
+// items.forEach((item)=> console.log(item));
+
+// const ul = document.querySelector('.items');
+
+// ul.remove();////once you created the variable that connects to one of the html elements, you can manipulate it by using methods like .remove. This method in this example removes all in the list items inside of the ul class.
+
+// ul.lastElementChild.remove();//you can also select what part of the variable you want to effect if it have multiple part in it like parent and child relations. In this example, we use a like as the variable, which has 3 components: item 1, item 2, item 3 and the lastElementChild method effects item 3 by removing it, since I also used the remove method.  
+
+// ul.firstElementChild.textContent = 'Hello';//this is similar to above, but I used the firstElementChild which effects item 1, and I changed the text to "Hello", since I used the .textContent method to change the text. Also, the textContent adds plain text, but you can't put html tags. 
+
+// ul.children[1].innerText = 'Brad';//this example is a little different because I'm not using neither firstElementChild or lastElementChild, but just children[index]. Using just children and an index number will allow you to select a element between the first and last child. This is used for list or arrays larger than 2 components. Also, the innerText property adds Brad to the HTML file, but doesn't effect/override the css properties.  
+
+// ul.lastElementChild.innerHTML = '<h1>Hello!</h1>';//the use of the innerHTML property allows the user to create a html tag, that overrides the css properties.
+
+// const btn = document.querySelector('.btn');
+// btn.style.background = "red";//you can also change the css styles on javascript by using the style property and the thing you want to change.
+
+// ul.firstElementChild.style.background ='blue';//you can also change child properties inside a element.
+
+// const btn = document.querySelector('.btn');
+
+// btn.addEventListener('click', (e)=>{
+//     e.preventDefault();
+//     document.querySelector('#my-form').style.background = "#ccc";
+//     document.querySelector(".items").lastElementChild.innerHTML = '<h1>Hello!</h1>';
+// });//here we used a method called addEventListener, this allows you to do many different things based on an event/action you do. In this example, if we click on the submit button, we get a gray background and the last child text changes to Hello!. This is done but adding the addEventListener to a action button like submit, so like this btn.addEventListener(), this is how you start the func. You can enter 2 parameters, first is the action that is required for the func to work, and second is a func with the arguments/logic you can to happen when the action button is pressed. In this case, if we press on the submit button, we get a gray background and the last child text changes to Hello!
+
+const myForm = document.querySelector('#my-form');//we are just creating a component that is a browser element being linked to the id called my-form using the querySelector.
+const nameInput = document.querySelector('#name');
+const emailInput = document.querySelector('#email');
+const msg = document.querySelector('.msg');
+const userList = document.querySelector('#users');
+
+myForm.addEventListener('submit', onSubmit);//this is creating a event/action.........
+
+function onSubmit(e) {
+    e.preventDefault();
+if (nameInput.value === "" || emailInput.value === "") {
+    msg.innerHTML = "Please enter all fields";
+
+    setTimeout(()=>msg.remove(), 3000);
+} else {
+const li = document.createElement('li');
+li.appendChild(document.createTextNode(`${nameInput.value} : ${emailInput.value}`));
+
+userList.appendChild(li);
+
+// Clear Fields
+
+nameInput.value = '';
+emailInput.value = '';
+}
+};
