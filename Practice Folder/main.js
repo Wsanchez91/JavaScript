@@ -386,31 +386,31 @@
 //     e.preventDefault();
 //     document.querySelector('#my-form').style.background = "#ccc";
 //     document.querySelector(".items").lastElementChild.innerHTML = '<h1>Hello!</h1>';
-// });//here we used a method called addEventListener, this allows you to do many different things based on an event/action you do. In this example, if we click on the submit button, we get a gray background and the last child text changes to Hello!. This is done but adding the addEventListener to a action button like submit, so like this btn.addEventListener(), this is how you start the func. You can enter 2 parameters, first is the action that is required for the func to work, and second is a func with the arguments/logic you can to happen when the action button is pressed. In this case, if we press on the submit button, we get a gray background and the last child text changes to Hello!
+// // });//here we used a method called addEventListener, this allows you to do many different things based on an event/action you do. In this example, if we click on the submit button, we get a gray background and the last child text changes to Hello!. This is done but adding the addEventListener to a action button like submit, so like this btn.addEventListener(), this is how you start the func. You can enter 2 parameters, first is the action that is required for the func to work, and second is a func with the arguments/logic you can to happen when the action button is pressed. In this case, if we press on the submit button, we get a gray background and the last child text changes to Hello!
 
-const myForm = document.querySelector('#my-form');//we are just creating a component that is a browser element being linked to the id called my-form using the querySelector.
-const nameInput = document.querySelector('#name');
-const emailInput = document.querySelector('#email');
-const msg = document.querySelector('.msg');
-const userList = document.querySelector('#users');
+// const myForm = document.querySelector('#my-form');//we are just creating a component that is a browser element being linked to the id called my-form using the querySelector.
+// const nameInput = document.querySelector('#name');
+// const emailInput = document.querySelector('#email');
+// const msg = document.querySelector('.msg');
+// const userList = document.querySelector('#users');
 
-myForm.addEventListener('submit', onSubmit);//this is creating a event/action.........
+// myForm.addEventListener('submit', onSubmit);//this is creating a event/action.........
 
-function onSubmit(e) {
-    e.preventDefault();
-if (nameInput.value === "" || emailInput.value === "") {
-    msg.innerHTML = "Please enter all fields";
+// function onSubmit(e) {
+//     e.preventDefault();
+// if (nameInput.value === "" || emailInput.value === "") {
+//     msg.innerHTML = "Please enter all fields";
 
-    setTimeout(()=>msg.remove(), 3000);
-} else {
-const li = document.createElement('li');
-li.appendChild(document.createTextNode(`${nameInput.value} : ${emailInput.value}`));
+//     setTimeout(()=>msg.remove(), 3000);
+// } else {
+// const li = document.createElement('li');
+// li.appendChild(document.createTextNode(`${nameInput.value} : ${emailInput.value}`));
 
-userList.appendChild(li);
+// userList.appendChild(li);
 
-// Clear Fields
+// // Clear Fields
 
-nameInput.value = '';
-emailInput.value = '';
-}
-};
+// nameInput.value = '';
+// emailInput.value = '';
+// }
+// };
